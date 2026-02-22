@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/browser-modem-simulator/',
+  base: process.env.NODE_ENV === 'production' ? '/browser-modem-simulator/' : '/',
   plugins: [react(), tailwindcss()],
 })
